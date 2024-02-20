@@ -1,7 +1,6 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
 import pandas as pd
-from sklearn.preprocessing import MinMaxScaler
 
 app = Flask(__name__)
 CORS(app)
@@ -69,10 +68,65 @@ def calculate_product_stats():
     result_json = product_line_stats.to_json(orient='records')
 
     return jsonify(result_json)
- 
 
+'''
+seasonal popularity
+'''
+@app.route('/seasonal_analysis', methods=['GET'])
+def seasonal_analysis():
+    # Load the sales data
+    sales = pd.read_csv(r"public/uploads/updated_products.csv")
 
+    # Define seasons based on months
+    def get_season(month):
+        if month in [11, 12, 1, 2]:  # Winter
+            return 'Winter'
+        elif month in [3, 4, 5]:  # Spring
+            return 'Spring'
+        elif month in [6, 7, 8, 9, 10]:  # Summer
+            return 'Monsoon'
 
+    # Preprocess the sales data
+    sales['Date'] = pd.to_datetime(sales['Date'])
+    sales['Month'] = sales['Date'].dt.month
+    sales['Season'] = sales['Month'].apply(get_season)
+
+    # Define weights for each metric
+    weightsNew = {
+        'Rating': 0.4,
+        'Unit price': 0.2,
+        'gross income': 0.1,
+        'Quantity': 0.3
+    }
+
+    # Normalize the values for each metric
+    for col in ['Rating', 'Unit price', 'gross income', 'Quantity']:
+        min_val = sales[col].min()
+        max_val = sales[col].max()
+        sales[col] = (sales[col] - min_val) / (max_val - min_val)
+
+    # Calculate the popularity score for each product line in each season
+    sales['Popularity Score'] = (weightsNew['Rating'] * sales['Rating']) + \
+                                (weightsNew['Unit price'] * sales['Unit price']) + \
+                                (weightsNew['gross income'] * sales['gross income']) + \
+                                (weightsNew['Quantity'] * sales['Quantity'])
+
+    # Group by season and product line, and calculate the average popularity score
+    seasonal_popularity = sales.groupby(['Season', 'Product line'])['Popularity Score'].mean().reset_index(name='Average Popularity Score')
+
+    # Scale the 'Average Popularity Score' column to range from 0 to 1
+    seasonal_popularity['Scaled Popularity Score'] = (seasonal_popularity['Average Popularity Score'] - seasonal_popularity['Average Popularity Score'].min()) / (seasonal_popularity['Average Popularity Score'].max() - seasonal_popularity['Average Popularity Score'].min())
+
+    # Create a dictionary to store the result
+    result = {}
+
+    # Iterate over unique seasons
+    for season in sales['Season'].unique():
+        season_data = seasonal_popularity[seasonal_popularity['Season'] == season]
+        popular_products = season_data.sort_values(by='Scaled Popularity Score', ascending=False)
+        result[season] = popular_products.to_dict(orient='records')
+
+    return jsonify(result)
 
 
 
