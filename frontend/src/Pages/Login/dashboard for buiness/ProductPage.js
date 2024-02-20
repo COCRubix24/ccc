@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Dashboard.css";
+import "./Dashboard.css"
 import Header from "./Header";
 import Sidebar from "./Sidebar";
 import ProductImport from "./importdata";
@@ -13,6 +13,7 @@ function ProductPage() {
     return (
         <div className="grid-container">
             {/* <Header OpenSidebar={Category} /> */}
+          
             <Sidebar
                 openSidebarToggle={openSidebarToggle}
                 OpenSidebar={OpenSidebar}

@@ -1,16 +1,14 @@
 .product-import-container {
-  margin-top: 150px; /* Adjust as needed */
+  margin-top: 150px;
+  position: relative;
+right:1500px; /* Adjust as needed */
 }
 
-.import-header {
-  margin-bottom: 20px;
-  text-align: center; /* Center the header */
-}
 
-.grid-container {
+.grid-containerhe {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 30px;
 }
 
 .grid-item {
@@ -25,6 +23,7 @@
   padding: 20px;
   border-radius: 5px;
   text-align: center;
+  width:150px;
 }
 
 .sales {
@@ -49,8 +48,10 @@
 }
 
 .dropzone-container {
-  margin-top: 20px;
+  margin-top: 100px;
   text-align: center;
+  width:500px;
+
 }
 
 .dropzone {
@@ -59,6 +60,9 @@
   padding: 20px;
   cursor: pointer;
   transition: border 0.3s ease;
+  color:blue;
+  position: relative;
+  left:300px;
 }
 
 .dropzone.active {
@@ -73,4 +77,31 @@
 .file-preview h4 {
   margin-bottom: 10px;
   font-size: 16px;
+}
+.import-header
+{
+  position: relative;
+  left:400px;
+  width:500px;
+  margin-top: 10px;
+  color:rgb(224, 150, 13);
+  
+}
+.alert-container {
+  display: flex;
+  display: flex;
+ position: relative;
+ right:500px;
+  color: #ff0000; /* Red color for the error message */
+  margin-top: 90px;
+  width:1000px;
+}
+
+.alert-symbol {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.error-message {
+  margin: 0;
 }
