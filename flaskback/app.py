@@ -79,11 +79,11 @@ def seasonal_analysis():
 
     # Define seasons based on months
     def get_season(month):
-        if month in [11, 12, 1, 2]:  # Winter
+        if month in [ 11, 12, 1]:  # Winter
             return 'Winter'
-        elif month in [3, 4, 5]:  # Spring
-            return 'Spring'
-        elif month in [6, 7, 8, 9, 10]:  # Summer
+        elif month in [3, 4, 5, 6]:  # Spring
+            return 'Summer'
+        elif month in [7, 8, 9, 10, 2]:  # Summer
             return 'Monsoon'
 
     # Preprocess the sales data
