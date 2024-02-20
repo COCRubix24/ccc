@@ -1,15 +1,15 @@
 import React from 'react';
 import './Navbar.css';
 import Navbarlist from './Navbarlist';
-import { UserContext } from '../context/UserContext';
-import { CompanyContext } from '../context/CompanyContext';
+import { UserContext } from '../../Components/context/UserContext';
+import { CompanyContext } from '../../Components/context/CompanyContext';
 
 import { useContext } from 'react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
-import Logo from '../../assets/logo.png'
+import Logo from '../../assets/smartshelf-removebg-preview (1).png'
 const Navbar = () => {
   const { isLoggedIn, userr, checkUserLoggedIn, handleLogout } = useContext(UserContext);
   const { isLoggedInC, Companyy, checkCompanyLoggedIn, handleLogout2 } = useContext(CompanyContext);
@@ -57,7 +57,7 @@ const Navbar = () => {
       <div className="logo-links">
         <h2>
           <Link to="/" style={{ textDecoration: 'none', color: 'orange' }}>
-            <img src={Logo} alt="" srcset="" style={{ width: '12rem' }} />
+            <img src={Logo} alt="" srcset="" style={{ width: '8rem' }} />
           </Link>
         </h2>
         <ul className="navitems">

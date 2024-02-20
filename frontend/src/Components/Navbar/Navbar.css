@@ -8,7 +8,7 @@
     background-color: #514f4f;
 
     /* box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); */
-    height: 50px;
+    height: 100px;
 }
 
 .logo-links {
@@ -155,4 +155,9 @@ h2 {
     font-size: 19px; /* Adjust font size as needed */
     padding: 8px 15px; /* Adjust padding as needed */
     margin-top: 10px; /* Adjust margin as needed */
+}
+#google_translate_element
+{
+    position: relative;
+    left:100px;
 }

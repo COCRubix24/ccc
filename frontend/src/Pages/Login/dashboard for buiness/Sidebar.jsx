@@ -40,9 +40,9 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
                 </a>
             </li>
             <li className='sidebar-list-item'>
-                <a href="">
+            <Link to="/Imageiput">
                     <BsListCheck className='icon'/>Margin and Season
-                </a>
+               </Link>
             </li>
             <li className='sidebar-list-item'>
             <Link to="/analytics">

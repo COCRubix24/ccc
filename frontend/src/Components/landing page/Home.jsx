@@ -9,24 +9,22 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="home-container">
-
       <div className="home-banner-container">
         <div className="home-bannerImage-container">
           <img src={BannerBackground} alt="" />
         </div>
         <div className="home-text-section">
           <h1 className="primary-heading" >
-  Your Voice,
+          Empower,
 </h1>
-            <h1 className="primary-heading"> Our Solution!
+            <h1 className="primary-heading">  Your Shelf Optimization
           </h1>
           <p className="primary-text">
-          Where your concerns meet swift resolutions — a platform 
-          dedicated to transforming your feedback into actionable solutions, ensuring your voice shapes a better consumer experience.
+          Transform your retail strategy with our ShelfOptimize tool. Analyze product placement, optimize inventory, and enhance consumer experience.
           </p>
-          <Link to ='/docs'>
+          <Link to ='/login'>
           <button className="secondary-button">
-          File a Complaint<FiArrowRight />{" "}
+          Let's Optimize<FiArrowRight />{" "}
             </button>
             </Link>
         </div>
