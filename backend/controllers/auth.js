@@ -3,8 +3,32 @@ import bcrypt from "bcryptjs";
 import { createError } from "../utils/error.js";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
+import multer from "multer";
+import path, { dirname } from "path";
+import { fileURLToPath } from 'url';
 
 dotenv.config();
+export const addExcel = async (req, res) => {
+  const {id} = req.body;
+  if (!req.files) {
+    throw new Error("No file uploaded");
+  }
+  const productImage = req.files.file;
+  const __filename = fileURLToPath(import.meta.url);
+  let __dirname = dirname(__filename);
+  
+  const imagePath = path.join(
+    __dirname,
+    "../../flaskback/public/uploads" + `${productImage.name}`
+  );
+  await productImage.mv(imagePath);
+  const user = await User.findOne({_id: id});
+  user.file = imagePath;
+  await user.save();
+  return res
+    .status(200)
+    .json({ image: { src: `/uploads/${productImage.name}` } });
+};
 
 export const register = async (req, res, next) => {
   try {

@@ -11,6 +11,15 @@ import ocrRoute from "./routes/ocrAI.js";
 const app = express();
 dotenv.config();
 
+import fileUpload from "express-fileupload";
+import {v2 as cloudinary} from 'cloudinary';
+          
+cloudinary.config({ 
+  cloud_name: process.env.CLOUD_NAME, 
+  api_key: process.env.API_KEY, 
+  api_secret: process.env.API_SECRET 
+});
+
 const corsOptions = {
     origin: "http://localhost:3000",
     credentials: true,
@@ -45,6 +54,7 @@ app.get("/", (req, res) => {
 //middlewares
 app.use(express.json());
 app.use(cookieParser());
+app.use(fileUpload({ useTempFiles: true }));
 
 // routes
 app.use("/api/auth", authRoute);
