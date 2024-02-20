@@ -29,6 +29,8 @@ import CategoryPage from "./Pages/Login/dashboard for buiness/CategoryPage.js";
 import ComplaintList from "./Pages/Login/dashboard for buiness/ComplaintList.js";
 import Dept from "./Pages/Login/dashboard for buiness/Dept.js";
 import Leaderboard from "./Pages/Login/LeaderBoard.js";
+import ReportPage from "./Pages/ReportPage.jsx";
+
 function App() {
     return (
         <UserProvider>
@@ -70,7 +72,8 @@ function App() {
                         />
                         <Route path="/dept/:index" element={<Dept />} />
                         <Route path="/leaderboard" element={<Leaderboard />} />
-                    </Routes>
+                        <Route path="/analytics" element={<ReportPage />} />
+                    </Routes> 
                     <Footer />
                 </BrowserRouter>
             </CompanyProvider>

@@ -45,11 +45,12 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
                 </a>
             </li>
             <li className='sidebar-list-item'>
-                <a href="">
+            <Link to="/analytics">
                     <BsMenuButtonWideFill className='icon'/>  Analytics 
                     
-                    eports
-                </a>
+                    Reports
+                    </Link>
+               
             </li>
             <li className='sidebar-list-item'>
                 <a href="">
