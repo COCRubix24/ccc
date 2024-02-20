@@ -18,33 +18,35 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
 
         <ul className='sidebar-list'>
             <li className='sidebar-list-item'>
-                <a href="">
+            <Link to="/dashboardbusiness">
                     <BsGrid1X2Fill className='icon'/> Dashboard
-                </a>
+                    </Link>
             </li>
             <li className='sidebar-list-item'>
-                <a href="">
-                    <BsFillArchiveFill className='icon'/> Products
-                </a>
+            <Link to="/productimport">
+                    <BsFillArchiveFill className='icon'/>Product Import 
+                    </Link>
             </li>
             <li className='sidebar-list-item'>
                 <Link to="/category">
-                    <BsFillGrid3X3GapFill className='icon'/> Categories
+                    <BsFillGrid3X3GapFill className='icon'/> Shelf Optimization
                 </Link>
             </li>
             <li className='sidebar-list-item'>
                 <a href="">
-                    <BsPeopleFill className='icon'/> Customers
+                    <BsPeopleFill className='icon'/> Popularity Analysis
                 </a>
             </li>
             <li className='sidebar-list-item'>
                 <a href="">
-                    <BsListCheck className='icon'/> Inventory
+                    <BsListCheck className='icon'/>Margin and Season
                 </a>
             </li>
             <li className='sidebar-list-item'>
                 <a href="">
-                    <BsMenuButtonWideFill className='icon'/> Reports
+                    <BsMenuButtonWideFill className='icon'/>  Analytics 
+                    
+                    eports
                 </a>
             </li>
             <li className='sidebar-list-item'>

@@ -14,6 +14,7 @@ import Main from "./Pages/Login/dashboard for buiness/Main.jsx";
 import Dashboard from "./Pages/Login/dashboard for buiness/Dashboard.jsx";
 import DisplayCaseDetailsPage from "./Pages/Login/DisplayCaseDetailsPage.js";
 import Thanks from "./Pages/Login/Thanks.js";
+import ProductPage from "./Pages/Login/dashboard for buiness/ProductPage.js";
 
 
 import Ask from "./Pages/Login/Ask.js";
@@ -50,8 +51,8 @@ function App() {
                         />
                         <Route path="/thanks" element={<Thanks />} />
                        
-                        {/* <Route path="/dashb" element={<DashboardB />} /> */}
-                        
+                       
+                        <Route path="/productimport" element={<ProductPage/>} />
                        
                         <Route path="/chat" element={<Chat />} />
                        

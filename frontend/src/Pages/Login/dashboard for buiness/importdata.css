@@ -1,0 +1,86 @@
+.product-import-container {
+ position: relative;
+ left:200px;
+  margin-top: 50px;
+}
+
+.import-header {
+  margin-bottom: 20px;
+}
+
+.prerequisite {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.sales {
+  background-color: #ffd700; /* Yellow */
+}
+
+.margin {
+  background-color: #87ceeb; /* Sky Blue */
+}
+
+.items {
+  background-color: #ff6347; /* Tomato */
+}
+
+.ratings {
+  background-color: #90ee90; /* Light Green */
+}
+
+.symbol {
+  color: green;
+  font-size: 24px;
+}
+
+.dropzone-container {
+position:relative ;
+bottom:500px;
+margin-top: 20px;
+color: #007bff; /* Adjust the margin as needed */
+}
+
+.dropzone {
+  border: 2px dashed #cccccc;
+  border-radius: 5px;
+  padding: 20px;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.dropzone.active {
+  border-color: #007bff;
+}
+
+.file-preview {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.file-preview h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.import-header{
+
+}
