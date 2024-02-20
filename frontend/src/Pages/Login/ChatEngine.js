@@ -1,7 +1,7 @@
 import { ChatEngine } from "react-chat-engine";
-import { UserContext } from "../../context/UserContext";
+import { UserContext } from "../../Components/context/UserContext";
 import { useContext } from "react";
-import { CompanyContext } from "../../context/CompanyContext";
+import { CompanyContext } from "../../Components/context/CompanyContext";
 
 const ChatEngineComponent = () => {
     const { isLoggedIn, userr, checkUserLoggedIn, handleLogout } =

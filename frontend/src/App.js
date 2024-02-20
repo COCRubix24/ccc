@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
-import { UserProvider } from "./context/UserContext";
-import { CompanyProvider } from "./context/CompanyContext";
+import { UserProvider } from "./Components/context/UserContext.js";
+import { CompanyProvider } from "./Components/context/CompanyContext.js";
 import Login from "./Pages/Login/Login.js";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer.js";

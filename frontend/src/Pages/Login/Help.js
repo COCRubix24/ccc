@@ -4,7 +4,7 @@ import Chat from "../../Components/Chat";
 // import { Link } from "@react-navigation/native";
 // import { Link } from "react-router-dom";
 import Blob from './blob.gif'
-import { UserContext } from "../../context/UserContext";
+import { UserContext } from "../../Components/context/UserContext";
 import ContactImage from '../../assets/chat5.png'
 
 import axios from "axios";
