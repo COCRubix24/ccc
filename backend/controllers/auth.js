@@ -19,7 +19,7 @@ export const addExcel = async (req, res) => {
   
   const imagePath = path.join(
     __dirname,
-    "../../flaskback/public/uploads" + `${productImage.name}`
+    "../../flaskback/public/uploads/" + `${productImage.name}`
   );
   await productImage.mv(imagePath);
   const user = await User.findOne({_id: id});
@@ -27,7 +27,7 @@ export const addExcel = async (req, res) => {
   await user.save();
   return res
     .status(200)
-    .json({ image: { src: `/uploads/${productImage.name}` } });
+    .json({ image: { src: `/public/uploads/${productImage.name}` } });
 };
 
 export const register = async (req, res, next) => {

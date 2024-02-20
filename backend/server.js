@@ -7,6 +7,7 @@ import cors from "cors";
 import authRoute from "./routes/auth.js";
 import usersRoute from "./routes/users.js";
 import ocrRoute from "./routes/ocrAI.js";
+import excelRouter from "./routes/getExcelData.js";
 
 const app = express();
 dotenv.config();
@@ -60,6 +61,7 @@ app.use(fileUpload({ useTempFiles: true }));
 app.use("/api/auth", authRoute);
 app.use("/api/users", usersRoute);
 app.use("/api/ocr", ocrRoute);
+app.use("/api/excel", excelRouter);
 
 app.use((err, req, res, next) => {
     const errorStatus = err.status || 500;
