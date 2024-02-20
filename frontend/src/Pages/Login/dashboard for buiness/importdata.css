@@ -1,11 +1,15 @@
 .product-import-container {
  position: relative;
- left:200px;
-  margin-top: 50px;
+ right:550px;
+margin-top: 150px;
+
+
 }
 
 .import-header {
   margin-bottom: 20px;
+  width:500px;
+  margin-top:50px;
 }
 
 .prerequisite {
@@ -15,14 +19,17 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 50px;
   margin-bottom: 20px;
+  width:500px;
+ 
 }
 
 .grid-item {
   display: flex;
-  justify-content: center;
+  width:120px;
+
 }
 
 .box {
@@ -30,6 +37,8 @@
   padding: 20px;
   border-radius: 5px;
   text-align: center;
+  height:120px;
+  width:600px;
 }
 
 .sales {
@@ -55,6 +64,7 @@
 
 .dropzone-container {
 position:relative ;
+left:300px;
 bottom:500px;
 margin-top: 20px;
 color: #007bff; /* Adjust the margin as needed */
@@ -81,6 +91,8 @@ color: #007bff; /* Adjust the margin as needed */
   margin-bottom: 10px;
   font-size: 16px;
 }
-.import-header{
-
+file-preview
+{
+  position:relative ;
+bottom:500px;
 }

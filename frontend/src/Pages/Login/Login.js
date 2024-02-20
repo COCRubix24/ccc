@@ -117,6 +117,8 @@ const Login = () => {
                 }
             );
 
+            console.log(response.data);
+
             checkUserLoggedIn();
             alert("Login succesful");
             navigate("/dashboardbusiness");
