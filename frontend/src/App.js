@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
-import { UserProvider } from "./context/UserContext";
-import { CompanyProvider } from "./context/CompanyContext";
+import { UserProvider } from "./Components/context/UserContext.js";
+import { CompanyProvider } from "./Components/context/CompanyContext.js";
 import Login from "./Pages/Login/Login.js";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer.js";
@@ -30,6 +30,8 @@ import ComplaintList from "./Pages/Login/dashboard for buiness/ComplaintList.js"
 import Dept from "./Pages/Login/dashboard for buiness/Dept.js";
 import Leaderboard from "./Pages/Login/LeaderBoard.js";
 import ReportPage from "./Pages/ReportPage.jsx";
+import PopularAnalysisPage from "./Pages/PopularAnalysisPage.jsx";
+
 
 function App() {
     return (
@@ -73,6 +75,7 @@ function App() {
                         <Route path="/dept/:index" element={<Dept />} />
                         <Route path="/leaderboard" element={<Leaderboard />} />
                         <Route path="/analytics" element={<ReportPage />} />
+                        <Route path="/popularAnalysis" element={<PopularAnalysisPage />} />
                     </Routes> 
                     <Footer />
                 </BrowserRouter>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { CompanyContext } from "../../../context/CompanyContext";
+import { CompanyContext } from "../../../Components/context/CompanyContext";
 import { useContext } from "react";
 import './Dept.css';
 

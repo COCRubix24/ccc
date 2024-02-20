@@ -1,8 +1,8 @@
 import React from 'react';
 import './Navbar.css';
 import Navbarlist from './Navbarlist';
-import { UserContext } from '../../context/UserContext';
-import { CompanyContext } from '../../context/CompanyContext';
+import { UserContext } from '../context/UserContext';
+import { CompanyContext } from '../context/CompanyContext';
 
 import { useContext } from 'react';
 import { useState } from 'react';

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Category.css";
 
-import { CompanyContext } from "../../../context/CompanyContext";
+import { CompanyContext } from "../../../Components/context/CompanyContext";
 import { useContext } from "react";
 
 const Categories = () => {

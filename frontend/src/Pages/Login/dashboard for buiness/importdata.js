@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import './importdata.css'; // Import your custom CSS file
-import { UserContext } from "../../../context/UserContext";
+import { UserContext } from "../../../Components/context/UserContext";
 import { useContext } from "react";
 
 import axios from "axios";
