@@ -44,7 +44,7 @@ const Navbar = () => {
         <div className="ml-auto">
           {isLoginPage ? null : (
             <button className="login-button">
-              <Link to="/ask">Sign in</Link>
+              <Link to="/login">Sign in</Link>
             </button>
           )}
         </div>

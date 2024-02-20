@@ -14,18 +14,13 @@ import Main from "./Pages/Login/dashboard for buiness/Main.jsx";
 import Dashboard from "./Pages/Login/dashboard for buiness/Dashboard.jsx";
 import DisplayCaseDetailsPage from "./Pages/Login/DisplayCaseDetailsPage.js";
 import Thanks from "./Pages/Login/Thanks.js";
-import Sidebaruser from "./Pages/Login/dashboard for user/Sidebaruser.jsx";
-import Mainuser from "./Pages/Login/dashboard for user/Mainuser.jsx";
-import Headeruser from "./Pages/Login/dashboard for user/Headeruser.jsx";
-import Dashboarduser from "./Pages/Login/dashboard for user/Dashboarduser.jsx";
+
+
 import Ask from "./Pages/Login/Ask.js";
 import LoginB from "./Pages/Login/LoginB.js";
-import DashboardB from "./Pages/Login/dashboard for user/DashboardB.js";
-import Complaint from "./Pages/Login/dashboard for user/CaseListP.js";
-import CaseListP from "./Pages/Login/dashboard for user/CaseListP.js";
+
 import Chat from "./Components/Chat.js";
-import TrackingPage from "./Pages/Login/dashboard for user/TrackingPage.jsx";
-import ComplainthistoryPage from "./Pages/Login/dashboard for user/complaint history/ComplainthistoryPage.jsx";
+
 import Blog from "./Components/Navbar/Blog.jsx";
 import Contactus from "./Components/Navbar/Contactus.jsx";
 import ChatEngineComponent from "./Pages/Login/ChatEngine.js";
@@ -41,7 +36,7 @@ function App() {
                     <Navbar />
                     <Routes>
                         <Route path="/login" element={<Login />} />
-                        <Route path="/loginb" element={<LoginB />} />
+                       
                         <Route
                             path="/dashboardbusiness"
                             element={<Dashboard />}
@@ -54,19 +49,13 @@ function App() {
                             element={<DisplayCaseDetailsPage />}
                         />
                         <Route path="/thanks" element={<Thanks />} />
-                        <Route
-                            path="/dashboarduser"
-                            element={<Dashboarduser />}
-                        />
-                        <Route path="/dashb" element={<DashboardB />} />
-                        <Route path="/ask" element={<Ask />} />
-                        <Route path="/caselists" element={<CaseListP />} />
+                       
+                        {/* <Route path="/dashb" element={<DashboardB />} /> */}
+                        
+                       
                         <Route path="/chat" element={<Chat />} />
-                        <Route path="/tracking" element={<TrackingPage />} />
-                        <Route
-                            path="/complaint-history"
-                            element={<ComplainthistoryPage />}
-                        />
+                       
+                        
                         <Route path="/Blogs" element={<Blog />} />
                         <Route path="/contact" element={<Contactus />} />
                         <Route

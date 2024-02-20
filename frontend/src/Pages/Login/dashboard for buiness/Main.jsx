@@ -137,14 +137,14 @@ const trendData = [
         <div className='main-cards'>
             <div className='card'>
                 <div className='card-inner'>
-                    <h3>Total no of complaints</h3>
+                    <h3>Total Sales</h3>
                     <BsFillArchiveFill className='card_icon'/>
                 </div>
                 <h1 className='hello'>121</h1>
             </div>
             <div className='card'>
                 <div className='card-inner'>
-                    <h3>Resolved complaints</h3>
+                    <h3>profit margins</h3>
                     <BsFillGrid3X3GapFill className='card_icon'/>
                 </div>
                 <h1 className='hello'>90</h1>

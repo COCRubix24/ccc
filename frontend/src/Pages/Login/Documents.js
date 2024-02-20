@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./Documents.css"; // Import your CSS for styling
 import axios from "axios";
 import { Link } from "react-router-dom";
-import JWT from "../../SECRET";
+
 import Help from "./Help";
 import { useNavigate } from "react-router-dom";
 import HelpBg from "../../assets/help.png";
@@ -71,40 +71,7 @@ const Documents = () => {
         const metadata = JSON.stringify({
             name: "File name",
         });
-        formData.append("pinataMetadata", metadata);
-
-        const options = JSON.stringify({
-            cidVersion: 0,
-        });
-        formData.append("pinataOptions", options);
-
-        try {
-            const res = await axios.post(
-                "https://api.pinata.cloud/pinning/pinFileToIPFS",
-                formData,
-                {
-                    maxBodyLength: "Infinity",
-                    headers: {
-                        "Content-Type": `multipart/form-data; boundary=${formData._boundary}`,
-                        Authorization: `Bearer ${JWT}`,
-                    },
-                }
-            );
-            setPinata(res.data);
-            // console.log(res.data);
-            console.log("pinata is", pinata);
-            navigate("/help", {
-                state: {
-                    anonymous,
-                    companyName,
-                    pinata: res.data,
-                    companies,
-                    additionalInformation,
-                },
-            });
-        } catch (error) {
-            console.log(error);
-        }
+       
     };
 
     return (
@@ -172,18 +139,7 @@ const Documents = () => {
                         </label>
                     </div>
 
-                    <img
-                        src={stars}
-                        style={{
-                            width: "15rem",
-                            zIndex: "0.5",
-                            position: "absolute",
-                            // float: "right",
-                            top: "30%",
-                            left: "20%",
-                        }}
-                    />
-
+                    
                     <div className="form-group">
                         <label>Additional Information (Optional):</label>
                         <textarea
