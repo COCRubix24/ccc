@@ -1,10 +1,15 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
 import pandas as pd
+from sklearn.preprocessing import MinMaxScaler
 
 app = Flask(__name__)
 CORS(app)
 
+
+'''
+all popularity
+'''
 @app.route('/calculate_popularity', methods=['GET'])
 def calculate_popularity():
     sales = pd.read_csv(r"public/uploads/updated_products.csv")
@@ -43,6 +48,35 @@ def calculate_popularity():
     result_json = sorted_scores.to_json(orient='records')
 
     return jsonify(result_json)
+
+
+'''
+main stats rating , gross income etc info
+'''
+@app.route('/calculate_product_stats', methods=['GET'])
+def calculate_product_stats():
+    sales = pd.read_csv("sales_data.csv")
+
+    # Group by product line and calculate the statistics
+    product_line_stats = sales.groupby('Product line').agg({
+        'Rating': 'mean',
+        'Unit price': 'mean',
+        'Quantity': 'sum',
+        'gross income': 'sum'
+    }).reset_index()
+
+    # Convert to JSON format
+    result_json = product_line_stats.to_json(orient='records')
+
+    return jsonify(result_json)
+ 
+
+
+
+
+
+
+
 
 if __name__ == '__main__':
     app.run(port = 5000, debug=True)
