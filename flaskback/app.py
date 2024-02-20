@@ -46,7 +46,7 @@ def calculate_popularity():
     # Convert to JSON format
     result_json = sorted_scores.to_json(orient='records')
 
-    return jsonify(result_json)
+    return result_json
 
 
 '''
@@ -67,7 +67,7 @@ def calculate_product_stats():
     # Convert to JSON format
     result_json = product_line_stats.to_json(orient='records')
 
-    return jsonify(result_json)
+    return result_json
 
 '''
 seasonal popularity
@@ -158,7 +158,7 @@ def seasonal_product_stats():
     # Convert to JSON format
     result_json = seasonal_product_stats.to_json(orient='records')
 
-    return jsonify(result_json)
+    return result_json
 
 
 if __name__ == '__main__':
