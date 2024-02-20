@@ -84,7 +84,7 @@ const LoginB = () => {
             );
             console.log(response.data);
             console.log("Register succesful");
-            navigate("/");
+            navigate("/dashboardbusiness");
         } catch (error) {
             console.error(error.response);
         }

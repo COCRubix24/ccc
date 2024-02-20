@@ -79,7 +79,7 @@ const Login = () => {
             console.log(response.data);
 
             console.log("Register succesful");
-            navigate("/");
+            navigate("/dashboardbusiness");
         } catch (error) {
             console.error(error.response);
         }
@@ -119,7 +119,7 @@ const Login = () => {
 
             checkUserLoggedIn();
             alert("Login succesful");
-            navigate("/");
+            navigate("/dashboardbusiness");
         } catch (error) {
             console.error(error.response);
         }
