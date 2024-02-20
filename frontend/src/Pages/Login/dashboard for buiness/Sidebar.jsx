@@ -5,12 +5,12 @@ import
   BsListCheck, BsMenuButtonWideFill, BsFillGearFill, }
  from 'react-icons/bs'
  import { FaUser } from 'react-icons/fa';
- import './Sidebar.css';
+ 
 
 function Sidebar({openSidebarToggle, OpenSidebar}) {
   return (
     
-    <aside id="sidebari" className={openSidebarToggle ? "sidebar-responsive": ""}>
+    <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive": ""}>
         <div className='sidebar-title'>
             <div className='sidebar-brand'>
                 < FaUser className='icon_header'/> username

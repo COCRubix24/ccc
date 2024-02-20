@@ -1,44 +1,30 @@
 .product-import-container {
- position: relative;
- right:550px;
-margin-top: 150px;
-
-
+  margin-top: 150px; /* Adjust as needed */
 }
 
 .import-header {
   margin-bottom: 20px;
-  width:500px;
-  margin-top:50px;
-}
-
-.prerequisite {
-  margin-bottom: 20px;
-  text-align: center;
+  text-align: center; /* Center the header */
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 50px;
-  margin-bottom: 20px;
-  width:500px;
- 
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .grid-item {
   display: flex;
-  width:120px;
-
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
 }
 
 .box {
+  height: 120px; /* Equal height for all boxes */
   background-color: #f0f0f0;
   padding: 20px;
   border-radius: 5px;
   text-align: center;
-  height:120px;
-  width:600px;
 }
 
 .sales {
@@ -63,11 +49,8 @@ margin-top: 150px;
 }
 
 .dropzone-container {
-position:relative ;
-left:300px;
-bottom:500px;
-margin-top: 20px;
-color: #007bff; /* Adjust the margin as needed */
+  margin-top: 20px;
+  text-align: center;
 }
 
 .dropzone {
@@ -90,9 +73,4 @@ color: #007bff; /* Adjust the margin as needed */
 .file-preview h4 {
   margin-bottom: 10px;
   font-size: 16px;
-}
-file-preview
-{
-  position:relative ;
-bottom:500px;
 }
