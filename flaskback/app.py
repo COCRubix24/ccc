@@ -15,10 +15,10 @@ def calculate_popularity():
 
     # Define weights for each factor
     weights = {
-        'price': 0.2,
-        'quantity': 0.3,
+        'price': 0.1,
+        'quantity': 0.2,
         'gross income': 0.1,
-        'rating': 0.4
+        'rating': 0.6
     }
 
     # Normalize values
@@ -54,7 +54,7 @@ main stats rating , gross income etc info
 '''
 @app.route('/calculate_product_stats', methods=['GET'])
 def calculate_product_stats():
-    sales = pd.read_csv("sales_data.csv")
+    sales = pd.read_csv(r"public/uploads/updated_products.csv")
 
     # Group by product line and calculate the statistics
     product_line_stats = sales.groupby('Product line').agg({
@@ -115,7 +115,7 @@ def seasonal_analysis():
     seasonal_popularity = sales.groupby(['Season', 'Product line'])['Popularity Score'].mean().reset_index(name='Average Popularity Score')
 
     # Scale the 'Average Popularity Score' column to range from 0 to 1
-    seasonal_popularity['Scaled Popularity Score'] = (seasonal_popularity['Average Popularity Score'] - seasonal_popularity['Average Popularity Score'].min()) / (seasonal_popularity['Average Popularity Score'].max() - seasonal_popularity['Average Popularity Score'].min())
+    seasonal_popularity['Scaled Popularity Score'] = (seasonal_popularity['Average Popularity Score'] - seasonal_popularity['Average Popularity Score'].min()) / (seasonal_popularity['Average Popularity Score'].max() - seasonal_popularity['Average Popularity Score'].min())*100
 
     # Create a dictionary to store the result
     result = {}
@@ -128,8 +128,37 @@ def seasonal_analysis():
 
     return jsonify(result)
 
+@app.route('/seasonal_product_stats', methods=['GET'])
+def seasonal_product_stats():
+    # Load the sales data
+    sales = pd.read_csv(r"public/uploads/updated_products.csv")
 
+    # Define seasons based on months
+    def get_season(month):
+        if month in [11, 12, 1, 2]:  # Winter
+            return 'Winter'
+        elif month in [3, 4, 5]:  # Spring
+            return 'Spring'
+        elif month in [6, 7, 8, 9, 10]:  # Summer
+            return 'Summer'
 
+    # Preprocess the sales data
+    sales['Date'] = pd.to_datetime(sales['Date'])
+    sales['Month'] = sales['Date'].dt.month
+    sales['Season'] = sales['Month'].apply(get_season)
+
+    # Group by season and product line, and calculate the statistics
+    seasonal_product_stats = sales.groupby(['Season', 'Product line']).agg({
+        'Rating': 'mean',
+        'Unit price': 'mean',
+        'Quantity': 'sum',
+        'gross income': 'sum'
+    }).reset_index()
+
+    # Convert to JSON format
+    result_json = seasonal_product_stats.to_json(orient='records')
+
+    return jsonify(result_json)
 
 
 if __name__ == '__main__':
