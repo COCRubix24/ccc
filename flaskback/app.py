@@ -36,9 +36,11 @@ def calculate_popularity():
     min_score = grouped_products.min()
     max_score = grouped_products.max()
     scaled_scores = (grouped_products - min_score) / (max_score - min_score) * 100
+    # Sort the scaled scores dataframe
+    sorted_scores = scaled_scores.reset_index().sort_values(by='Popularity Score', ascending=False)
 
     # Convert to JSON format
-    result_json = scaled_scores.reset_index().to_json(orient='records')
+    result_json = sorted_scores.to_json(orient='records')
 
     return jsonify(result_json)
 
