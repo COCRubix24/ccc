@@ -57,8 +57,9 @@ body {
   /* Sidebar  */
   #sidebar {
     grid-area: sidebar;
-    height: 100%;
-    background-color: white;
+    height: 80%;
+    width:250px;
+    background-color: rgb(92, 29, 29);
     overflow-y: auto;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;

@@ -41,9 +41,16 @@ const ProductImport = () => {
   
     return (
         <>
-         <h2 className="import-header">ADD THE PRODUCT DATA</h2>
+         <h2 className="import-header">UPLOAD YOUR FILE</h2>
+         
+     
+                <div className="alert-container">
+                    <div className="alert-symbol">&#9888;</div>
+                    <p className="error-message">Before uploading, please ensure that the file contains the following data.</p>
+                </div>
+        
             <div className="product-import-container">
-                <div className="grid-container">
+                <div className="grid-containerhe">
                     <div className="grid-item">
                         <div className="box sales">
                             <p>Product Sales</p>
