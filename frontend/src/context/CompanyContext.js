@@ -56,7 +56,12 @@ export const CompanyProvider = ({ children }) => {
 
     return (
         <CompanyContext.Provider
-            value={{ isLoggedInC, Companyy, checkCompanyLoggedIn, handleLogout2 }}
+            value={{
+                isLoggedInC,
+                Companyy,
+                checkCompanyLoggedIn,
+                handleLogout2,
+            }}
         >
             {children}
         </CompanyContext.Provider>
