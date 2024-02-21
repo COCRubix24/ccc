@@ -35,18 +35,18 @@ const Navbarlist = () => {
       cName: "Navlinks",
       icon: faEnvelope,
     },
-     {
-      title: "Blogs",
-      url: "/Blogs",
-      cName: "Navlinks",
-      icon: faNewspaper,
-    },
-    {
-      title: "Leaderboard",
-      url: "/leaderboard",
-      cName: "Navlinks",
-      // icon: faEnvelope,
-    },
+    //  {
+    //   title: "Blogs",
+    //   url: "/Blogs",
+    //   cName: "Navlinks",
+    //   icon: faNewspaper,
+    // },
+    // {
+    //   title: "Leaderboard",
+    //   url: "/leaderboard",
+    //   cName: "Navlinks",
+    //   // icon: faEnvelope,
+    // },
     // {
     //   title: "B2B services",
     //   url: "/",

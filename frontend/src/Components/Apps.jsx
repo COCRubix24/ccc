@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Board from "../Components/board/Board";
 import { observeKnight } from "../Components/util/KnightObserver";
 import { observeQueen } from "../Components/util/QueenObserver";
-import "../../src/stylesheets/global.css";
+// import "../../src/stylesheets/global.css";
 
 // chess board demo
 const Apps = () => {

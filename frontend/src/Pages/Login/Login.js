@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
-import { UserContext } from "../../context/UserContext";
+import { UserContext } from "../../Components/context/UserContext";
 import { useContext } from "react";
 
 import axios from "axios";
@@ -79,7 +79,7 @@ const Login = () => {
             console.log(response.data);
 
             console.log("Register succesful");
-            navigate("/");
+            navigate("/dashboardbusiness");
         } catch (error) {
             console.error(error.response);
         }
@@ -117,9 +117,11 @@ const Login = () => {
                 }
             );
 
+            console.log(response.data);
+
             checkUserLoggedIn();
             alert("Login succesful");
-            navigate("/");
+            navigate("/dashboardbusiness");
         } catch (error) {
             console.error(error.response);
         }

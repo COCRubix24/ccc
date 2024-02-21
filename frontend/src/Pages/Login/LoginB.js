@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 import { Link } from "react-router-dom";
-import { CompanyContext } from "../../context/CompanyContext";
+import { CompanyContext } from "../../Components/context/CompanyContext";
 import { useContext } from "react";
 
 import axios from "axios";
@@ -84,7 +84,7 @@ const LoginB = () => {
             );
             console.log(response.data);
             console.log("Register succesful");
-            navigate("/");
+            navigate("/dashboardbusiness");
         } catch (error) {
             console.error(error.response);
         }

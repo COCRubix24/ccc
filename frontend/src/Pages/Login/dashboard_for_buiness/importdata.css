@@ -1,0 +1,107 @@
+.product-import-container {
+  margin-top: 150px;
+  position: relative;
+right:1500px; /* Adjust as needed */
+}
+
+
+.grid-containerhe {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 30px;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
+}
+
+.box {
+  height: 120px; /* Equal height for all boxes */
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  width:150px;
+}
+
+.sales {
+  background-color: #ffd700; /* Yellow */
+}
+
+.margin {
+  background-color: #87ceeb; /* Sky Blue */
+}
+
+.items {
+  background-color: #ff6347; /* Tomato */
+}
+
+.ratings {
+  background-color: #90ee90; /* Light Green */
+}
+
+.symbol {
+  color: green;
+  font-size: 24px;
+}
+
+.dropzone-container {
+  margin-top: 100px;
+  text-align: center;
+  width:500px;
+
+}
+
+.dropzone {
+  border: 2px dashed #cccccc;
+  border-radius: 5px;
+  padding: 20px;
+  cursor: pointer;
+  transition: border 0.3s ease;
+  color:blue;
+  position: relative;
+  left:300px;
+}
+
+.dropzone.active {
+  border-color: #007bff;
+}
+
+.file-preview {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.file-preview h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.import-header
+{
+  position: relative;
+  left:400px;
+  width:500px;
+  margin-top: 10px;
+  color:rgb(224, 150, 13);
+  
+}
+.alert-container {
+  display: flex;
+  display: flex;
+ position: relative;
+ right:500px;
+  color: #ff0000; /* Red color for the error message */
+  margin-top: 90px;
+  width:1000px;
+}
+
+.alert-symbol {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.error-message {
+  margin: 0;
+}

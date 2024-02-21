@@ -1,0 +1,77 @@
+/* Updated TablePage.css */
+
+.filters {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+  max-width: 600px; /* Increase the max-width as needed */
+  border-radius: 5px;
+}
+
+.filters label {
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.filters input {
+  margin-right: 10px;
+  font-size: 14px;
+  padding: 8px; /* Increase padding for larger size */
+  width: 120px; /* Increase the width as needed */
+}
+
+/* Table container styles */
+.table-container {
+  position: relative;
+  bottom: 25px;
+  height: 90vh;
+  width: 160vh;
+  overflow-x: auto;
+  padding: 20px;
+  margin-top: 20px; /* Adjust this margin based on your specific layout */
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border: #ffbf60 2px solid;
+  border-radius: 5%;
+  height: 100%;
+  max-height: 10px;
+  border-collapse: collapse;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
+}
+
+/* Table header styles */
+thead {
+  background-color: #e48f0f;
+  color: #fff;
+}
+
+th,
+td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Link back to dashboard */
+.link-back {
+  margin-top: 20px;
+}
+
+.link-back a {
+  color: #e48f0f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.link-back a:hover {
+  text-decoration: underline;
+}
