@@ -1,4 +1,4 @@
-let queenPosition = [1, 3];
+let queenPosition = [1, 2];
 let observer = null;
 
 export const observeQueen = (o) => {

@@ -9,7 +9,7 @@ const queenSource = {
     },
 };
 const imageUrl =
-    "https://rukminim2.flixcart.com/image/850/1000/xif0q/cereal-flake/r/t/x/100-crunchy-choco-bites-jar-1-a-one-grocery-original-imagrhhgphe2fayg.jpeg?q=20&crop=false";
+    "https://cpng.pikpng.com/pngl/s/202-2028175_toothpaste-png-colgate-toothpaste-png-clipart.png";
 // Collecting function
 const collect = (connect, monitor) => ({
     connectDragSource: connect.dragSource(),

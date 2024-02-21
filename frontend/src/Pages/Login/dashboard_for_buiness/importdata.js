@@ -55,43 +55,43 @@ const ProductImport = () => {
                 <div className="grid-containerhe">
                     <div className="grid-item">
                         <div className="box sales">
-                            <p className='uoo'>Product line</p>
+                            <p className="uoo">Product line</p>
                             <span className="symbol">&#10003;</span>
                         </div>
                     </div>
                     <div className="grid-item">
                         <div className="box margin">
-                            <p className='uoo'>Unit Price</p>
+                            <p className="uoo">Unit Price</p>
                             <span className="symbol">&#10003;</span>
                         </div>
                     </div>
                     <div className="grid-item">
                         <div className="box items">
-                            <p className='uoo'>Quantity</p>
+                            <p className="uoo">Quantity</p>
                             <span className="symbol">&#10003;</span>
                         </div>
                     </div>
                     <div className="grid-item">
                         <div className="box date">
-                            <p className='uoo'>Date</p>
+                            <p className="uoo">Date</p>
                             <span className="symbol">&#10003;</span>
                         </div>
                     </div>
                     <div className="grid-item">
                         <div className="box time">
-                            <p className='uoo'>Time</p>
+                            <p className="uoo">Time</p>
                             <span className="symbol">&#10003;</span>
                         </div>
                     </div>
                     <div className="grid-item">
                         <div className="box cost">
-                            <p className='uoo'>Cost of good sales</p>
+                            <p className="uoo">Cost of good sales</p>
                             <span className="symbol">&#10003;</span>
                         </div>
                     </div>
                     <div className="grid-item">
                         <div className="box ratings">
-                            <p className='uoo'>Ratings</p>
+                            <p className="uoo">Ratings</p>
                             <span className="symbol">&#10003;</span>
                         </div>
                     </div>

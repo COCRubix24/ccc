@@ -14,6 +14,9 @@ import {
     Legend,
     ResponsiveContainer,
 } from "recharts";
+import { useState } from "react";
+import Header from "./Header";
+import Sidebar from "./Sidebar";
 
 const Analytics = () => {
     // Sample data for seasonal trends
@@ -24,30 +27,40 @@ const Analytics = () => {
         // Add more data for other months
     ];
     const data = [
-        { name: "Category A", value: 400 },
-        { name: "Category B", value: 300 },
-        { name: "Category C", value: 200 },
+        { name: "Electronics", value: 400 },
+        { name: "Clothing", value: 300 },
+        { name: "Home Decor", value: 200 },
         // Add more data for other categories
     ];
-    // Sample data for profit margins
+
     const profitData = [
-        { product: "Product A", margin: 0.25 },
-        { product: "Product B", margin: 0.35 },
-        { product: "Product C", margin: 0.2 },
+        { product: "Smartphone", margin: 0.25 },
+        { product: "T-Shirt", margin: 0.35 },
+        { product: "Vase", margin: 0.2 },
         // Add more data for other products
     ];
+
     const Hdata = [
         { month: "Jan", sales: 1000 },
         { month: "Feb", sales: 1500 },
         { month: "Mar", sales: 2000 },
         // Add more data for other months
     ];
+    const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
 
+    const OpenSidebar = () => {
+        setOpenSidebarToggle(!openSidebarToggle);
+    };
     return (
         <div
             className="analytics"
             style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}
         >
+            {/* <Header OpenSidebar={OpenSidebar} /> */}
+            <Sidebar
+                openSidebarToggle={openSidebarToggle}
+                OpenSidebar={OpenSidebar}
+            />
             <div style={chartContainerStyle}>
                 {/* Line chart for seasonal trends */}
                 <ResponsiveContainer width="100%" height={300}>
@@ -123,6 +136,6 @@ const chartContainerStyle = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: "30%",
+    width: "40%",
     flexDirection: "column",
 };

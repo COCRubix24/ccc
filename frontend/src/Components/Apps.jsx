@@ -3,6 +3,7 @@ import Board from "../Components/board/Board";
 import { observeKnight } from "../Components/util/KnightObserver";
 import { observeQueen } from "../Components/util/QueenObserver";
 // import "../../src/stylesheets/global.css";
+import Sidebar from "../Pages/Login/dashboard_for_buiness/Sidebar";
 
 // chess board demo
 const Apps = () => {
@@ -28,40 +29,51 @@ const Apps = () => {
             unsubscribeQueen();
         };
     }, []);
+    const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
+
+    const OpenSidebar = () => {
+        setOpenSidebarToggle(!openSidebarToggle);
+    };
 
     // Log knightPosition and queenPosition before passing them to the Board component
     console.log("knightPosition:", knightPosition);
     console.log("queenPosition:", queenPosition);
 
     return (
-        <div
-            style={{
-                display: "flex",
-                alignItems: "center",
-                width: "1500px",
-                justifyContent: "center",
-                // height: "0px",
-            }}
-        >
+        <div style={{ display: "flex" }}>
+            <Sidebar
+                openSidebarToggle={openSidebarToggle}
+                OpenSidebar={OpenSidebar}
+            />
             <div
                 style={{
-                    backgroundImage: `url(${backgroundImageUrl})`,
-                    backgroundSize: "cover",
-                    width: boardWidth,
+                    display: "flex",
                     alignItems: "center",
-                    // height: "100%",
+                    width: "1000px",
+                    justifyContent: "center",
+                    // height: "0px",
                 }}
             >
-                {/* Pass both knightPosition and queenPosition to the Board component */}
-                <Board
+                <div
                     style={{
+                        backgroundImage: `url(${backgroundImageUrl})`,
+                        backgroundSize: "cover",
                         width: boardWidth,
-                        display: "flex",
                         alignItems: "center",
+                        // height: "100%",
                     }}
-                    knightPosition={knightPosition}
-                    queenPosition={queenPosition}
-                />
+                >
+                    {/* Pass both knightPosition and queenPosition to the Board component */}
+                    <Board
+                        style={{
+                            width: boardWidth,
+                            display: "flex",
+                            alignItems: "center",
+                        }}
+                        knightPosition={knightPosition}
+                        queenPosition={queenPosition}
+                    />
+                </div>
             </div>
         </div>
     );

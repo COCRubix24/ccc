@@ -25,6 +25,9 @@ import Dept from "./Pages/Login/dashboard_for_buiness/Dept.js";
 import Leaderboard from "./Pages/Login/LeaderBoard.js";
 import Apps from "./Components/Apps.jsx";
 import Analytics from "./Pages/Login/dashboard_for_buiness/Analytics.jsx";
+import MarginPage from "./Pages/Login/dashboard_for_buiness/MarginPage.js";
+// import ProductPage from "./Pages/Login/dashboard_for_buiness/ProductPage.js";
+import PopularAnalysisPage from "./Pages/PopularAnalysisPage.jsx";
 function App() {
     return (
         <UserProvider>
@@ -49,10 +52,19 @@ function App() {
                             element={<DisplayCaseDetailsPage />}
                         /> */}
                         <Route path="/thanks" element={<Thanks />} />
+                        <Route path="/imageiput" element={<MarginPage />} />
                         {/* <Route path="/dashb" element={<DashboardB />} /> */}
                         <Route path="/chat" element={<Chat />} />
                         {/* <Route path="/Blogs" element={<Blog />} /> */}
                         <Route path="/contact" element={<Contactus />} />
+                        <Route
+                            path="/productimport"
+                            element={<ProductPage />}
+                        />
+                        <Route
+                            path="/popularAnalysis "
+                            element={<PopularAnalysisPage />}
+                        />
                         <Route
                             path="/chatengine"
                             element={<ChatEngineComponent />}

@@ -45,10 +45,11 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
                     </Link>
                 </li>
                 <li className="sidebar-list-item">
-                    <a href="/popularAnalysis">
+                    <Link to="/Analysis">
                         <BsPeopleFill className="icon" /> Popularity Analysis
-                    </a>
+                    </Link>
                 </li>
+
                 <li className="sidebar-list-item">
                     <Link to="/Imageiput">
                         <BsListCheck className="icon" />
