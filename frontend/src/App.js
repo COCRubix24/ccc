@@ -27,6 +27,7 @@ import ChatEngineComponent from "./Pages/Login/ChatEngine.js";
 import ReportPage from "./Pages/ReportPage.jsx";
 import PopularAnalysisPage from "./Pages/PopularAnalysisPage.jsx";
 import MarginPage from "./Pages/Login/dashboard for buiness/MarginPage.js"
+import SeasonalAnalyticsPage from "./Pages/SeasonalAnalyticsPage.jsx";
 
 
 function App() {
@@ -73,6 +74,7 @@ function App() {
                         {/* <Route path="/leaderboard" element={<Leaderboard />} /> */}
                         <Route path="/analytics" element={<ReportPage />} />
                         <Route path="/popularAnalysis" element={<PopularAnalysisPage />} />
+                        <Route path="/seasonalAnalytics" element={<SeasonalAnalyticsPage />} />
                     </Routes> 
                     <Footer />
                 </BrowserRouter>
