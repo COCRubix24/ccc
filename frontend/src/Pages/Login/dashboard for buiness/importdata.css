@@ -1,20 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=DM+Serif+Display&family=IBM+Plex+Serif:wght@700&family=Oswald:wght@300&family=Playfair+Display:wght@400;600&family=Roboto+Slab&family=Young+Serif&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 .product-import-container {
   margin-top: 150px;
   position: relative;
-right:1500px; /* Adjust as needed */
+right:1500px;
+font-family: "Abril Fatface", serif; /* Adjust as needed */
 }
 
-
+.uoo
+{
+  font-family: "Abril Fatface", serif;
+  font-size: 1.2rem;
+}
 .grid-containerhe {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   gap: 30px;
+ 
 }
 
 .grid-item {
   display: flex;
   justify-content: center; /* Center the items horizontally */
-  align-items: center; /* Center the items vertically */
+  align-items: center;
+  font-family: "Abril Fatface", serif; /* Center the items vertically */
 }
 
 .box {
@@ -24,10 +38,12 @@ right:1500px; /* Adjust as needed */
   border-radius: 5px;
   text-align: center;
   width:150px;
+  font-family: "Abril Fatface", serif;
 }
 
 .sales {
-  background-color: #ffd700; /* Yellow */
+  background-color: #ffd700;
+   /* Yellow */
 }
 
 .margin {
@@ -41,16 +57,29 @@ right:1500px; /* Adjust as needed */
 .ratings {
   background-color: #90ee90; /* Light Green */
 }
+.date {
+  background-color: #8A2BE2; /* Blue Violet */
+}
+
+.time {
+  background-color: #FF4500; /* Orange Red */
+}
+
+.cost {
+  background-color: #00CED1; /* Dark Turquoise */
+}
 
 .symbol {
   color: green;
   font-size: 24px;
+  font-family: "Abril Fatface", serif;
 }
 
 .dropzone-container {
   margin-top: 100px;
   text-align: center;
   width:500px;
+  font-family: "Abril Fatface", serif;
 
 }
 
@@ -63,20 +92,22 @@ right:1500px; /* Adjust as needed */
   color:blue;
   position: relative;
   left:300px;
+  font-family: "Abril Fatface", serif;
 }
 
 .dropzone.active {
   border-color: #007bff;
 }
-
 .file-preview {
   margin-top: 20px;
   text-align: center;
+  
 }
 
 .file-preview h4 {
   margin-bottom: 10px;
   font-size: 16px;
+  font-family: "Abril Fatface", serif;
 }
 .import-header
 {
@@ -85,6 +116,7 @@ right:1500px; /* Adjust as needed */
   width:500px;
   margin-top: 10px;
   color:rgb(224, 150, 13);
+  font-family: "Abril Fatface", serif;
   
 }
 .alert-container {
@@ -95,6 +127,7 @@ right:1500px; /* Adjust as needed */
   color: #ff0000; /* Red color for the error message */
   margin-top: 90px;
   width:1000px;
+  font-family: "Abril Fatface", serif;
 }
 
 .alert-symbol {
@@ -104,4 +137,5 @@ right:1500px; /* Adjust as needed */
 
 .error-message {
   margin: 0;
+  
 }

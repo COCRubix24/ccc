@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import './Margin.css';
 
-const ShelfAnalyzer = () => {
+const Margin = () => {
   const [loading, setLoading] = useState(false);
   const [analyzed, setAnalyzed] = useState(false);
   const [shelfImages, setShelfImages] = useState([]);
-  const [itemsPlacement, setItemsPlacement] = useState([]);
 
   const handleImageUpload = (event) => {
     const files = event.target.files;
@@ -30,21 +29,16 @@ const ShelfAnalyzer = () => {
 
     // Simulating analyzing process
     setTimeout(() => {
-      // Dummy items placement data
-      const placementData = [
-        { name: 'Item 1', position: 'Top Left' },
-        { name: 'Item 2', position: 'Top Right' },
-        { name: 'Item 3', position: 'Bottom Left' },
-        { name: 'Item 4', position: 'Bottom Right' }
-      ];
-
-      setItemsPlacement(placementData);
       setLoading(false);
       setAnalyzed(true);
     }, 2000); // Simulating 2 seconds of analyzing time
   };
 
   return (
+    <>
+     <h1 className='umm'>Let's Examine the shelf</h1>
+    <div className="container">
+   
     <div className="shelf-analyzer">
       <input type="file" accept="image/*" multiple onChange={handleImageUpload} />
       <button onClick={analyzeShelf}>Analyze</button>
@@ -53,9 +47,7 @@ const ShelfAnalyzer = () => {
 
       {analyzed && (
         <div className="items-placement">
-          {itemsPlacement.map((item, index) => (
-            <div key={index} className="item">{item.name} - {item.position}</div>
-          ))}
+          {/* Display the analyzed shelf items here */}
         </div>
       )}
 
@@ -65,7 +57,15 @@ const ShelfAnalyzer = () => {
         ))}
       </div>
     </div>
+    <div className="paragraph-card">
+        <h1 className='oo'>ANALYSIS</h1>
+    <p>
+      The first row of the shelf should contain 2 elements of this type and all.
+    </p>
+  </div>
+    </div>
+    </>
   );
 };
 
-export default ShelfAnalyzer;
+export default Margin;
